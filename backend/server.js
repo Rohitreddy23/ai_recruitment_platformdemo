@@ -22,10 +22,15 @@ app.use('/api/tests', require('./routes/tests'));
 app.use('/api/insights', require('./routes/insights'));
 app.use('/api/erd', require('./routes/erd_compliant'));
 
+// Test Route
 app.get('/', (req, res) => {
   res.json({ message: 'AI Recruitment Platform API' });
 });
 
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// ✅ Render Health Check Route
+app.get('/health', (req, res) => {
+  res.json({ ok: true });
 });
+
+/Fix server for Render deployment
+
