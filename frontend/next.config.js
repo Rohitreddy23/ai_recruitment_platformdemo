@@ -17,15 +17,10 @@ module.exports = nextConfig;
 const nextConfig = {
   async rewrites() {
     return [
-      {
-        source: '/api/:path*',
-        destination: 'https://ai-recruitment-platformdemo.onrender.com/api/:path*'
-      },
-      {
-        source: '/health',
-        destination: 'https://ai-recruitment-platformdemo.onrender.com/health'
-      }
+      { source: '/api/:path*', destination: 'https://YOUR-RENDER-SERVICE.onrender.com/api/:path*' },
+      { source: '/health',     destination: 'https://YOUR-RENDER-SERVICE.onrender.com/health' }
     ];
   }
 };
 module.exports = nextConfig;
+
